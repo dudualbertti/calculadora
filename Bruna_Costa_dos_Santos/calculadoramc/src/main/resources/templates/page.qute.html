@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Calculadora {name ?: "Quarkus"}</title>
+    <form action="/calculadora" method="POST">
+        <fieldset>
+            <fieldset>
+                <div>
+                    <label>Insira o valor 1</label>
+                    <input type="number" name="valor1" id="valor1" class="titulo" />
+                </div>
+                <div>
+                    <label>Insira o valor 2</label>
+                    <input type="number" name="valor2" id="valor2" class="titulo" />
+                </div>
+                <div>
+                    <label>Operaçao</label>
+                    <select>name:"operacao"
+                        <option>Soma</option>
+                        <option>Subtraçao</option>
+                        <option>Multiplicaçao</option>
+                        <option>Divisao</option>
+                    </select>
+                </div>
+                <button name="calcular" method="get" id="calcular">Calcular</button>
+            </fieldset>
+    </form>
+</head>
+
+
+<body>
+    <h1> resultado : <b>{resultado ?: "Teste"}</b></h1>
+
+
+</body>
+<style>
+  *  {
+        margin: 30;
+        padding: 30;
+    }
+
+    body {
+        background-color: #d40404;
+        color: #fff;
+    }
+
+
+    h1 {
+        font-family: sans-serif;
+        color: #000000;
+        font-size: 4vw;
+    }
+
+
+    h1 b {
+        color: #fff;
+    }
+
+
+    p {
+        font-size: 3vw;
+    }
+
+    input {}
+</style>
+
+</html>

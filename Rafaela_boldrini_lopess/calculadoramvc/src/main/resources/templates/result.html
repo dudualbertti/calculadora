@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* Estilos gerais para o body */
+        body {
+            background-color:#0b3185;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilos para a seção de resultado */
+        .resultado {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Estilos para o título "Resultado" */
+        .resultado h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para os parágrafos de texto */
+        .resultado p {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para os valores específicos */
+        .resultado p strong {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Estilos para o resultado */
+        .resultado p.result strong {
+            color: #023d10;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="resultado">
+        <h2>Resultado:</h2>
+        <p>Valores:</p>
+        <p>Valor 1: <strong>{val1}</strong></p>
+        <p>Valor 2: <strong>{val2}</strong></p>
+        <p>Operação: <strong>{operation}</strong></p>
+        <p class="result">Resultado: <strong>{result}</strong></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+*{
+    font-family: monospace;
+}
+
+body {
+    background-image: linear-gradient(rgb(255, 0, 179), rgb(255, 141, 255));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 93.3vh;
+    color: #fff;
+}
+
+h1 {
+    color: black;
+    font-size: 4rem;
+    
+    text-align: center;
+}
+
+h1 b {
+    color: #be9100;
+}
+
+p {
+
+    font-size: 2rem;
+}
+
+.container {
+    
+    width: 300px;
+    margin: auto;
+    padding: 40px;
+    justify-content: center;
+    background-color: rgb(255, 192, 243);
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.415);
+}
+
+input, select, button{
+    padding: 6px;
+    margin: 10px;
+}
+
+input{
+    width: 290px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.444);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition-duration: 0.3s;
+}
+
+input:focus{
+    background-color: pink;
+}
+
+select{
+    margin-left: 0;
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.401);
+    color: rgba(0, 0, 0, 0.572);
+    transition-duration: 0.3s;
+}
+
+select:focus{
+    color: black;
+    background-color: pink;
+}
+
+button{
+    width: 300px;
+    height: 50px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 25px;
+    background-color: rgb(255, 50, 149);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.413);
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    border-radius: 15px;
+    transition-duration: 0.5s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 142, 227);
+    transform: scale(1.1);
+}
+
+p{
+    font-size: 20px;
+    margin: 0;
+}

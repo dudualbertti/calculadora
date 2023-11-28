@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Java</title>
+    <style>
+
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: rgb(208, 247, 250);
+            color: #fff;
+        }
+
+        .container{
+            background-color: #8ad1d7;
+            width: 300px;
+            height: 50ch;
+            border-radius: 5px;
+            text-align: center;
+            margin: auto;
+            box-shadow: 4px 4px 4px 5px #84828296;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        h1 {
+            
+            text-align: center;
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #f30707;
+        }
+
+    
+
+        input
+        {
+        
+            font-size: 20px;
+            text-align: center;
+            width: 150px;
+            height: 25px;
+            border: none;
+            border-radius: 5px;
+        
+        } 
+        select{ 
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            height: 35px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        select:hover{
+            cursor: pointer;
+           
+        }
+
+
+        label{
+            color:#53565a;
+            font-family:Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+
+        }
+
+
+        button{
+            margin-top: 50px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            width: 100px;
+            height: 30px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            background-color: #ccc;
+        }
+    
+    </style>
+</head>
+<body>
+<h1>Fast <b>Calculator</b></h1>
+
+<div class="container">
+
+<form action="/calculadora/resultado" method="post">
+    <label>Valor 1</label>
+    <input type="number" name="valor1">
+    <br><br>
+    <label>Valor 2</label>
+    <input type="number" name="valor2">
+    <br><br>
+    <select name="operacao">
+        <option value="som">Soma</option>
+        <option value="sub">Subtração</option>
+        <option value="mult">Multiplicação</option>
+        <option value="div">Divisão</option>
+        
+    </select>
+    <br><br>
+    <button>Calcular</button>
+
+</form>
+</div>
+</body>
+</html>

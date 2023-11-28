@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+
+*{
+    font-family: monospace;
+}
+
+body {
+    background-color: #081b2a;
+    color: #000000;
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 50pt;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 25px;
+    width: 200px;
+    border-radius: 16px;
+    background-color: aliceblue;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.449);
+}
+
+input{
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color: #adc8dd;
+    color: black;
+}

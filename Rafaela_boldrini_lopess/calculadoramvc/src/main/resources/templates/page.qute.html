@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* Estilos gerais para o body */
+        body {
+            background-color: #0b3185;
+            /* Cor de fundo lilás */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilos gerais para o formulário */
+        form {
+            max-width: 400px;
+            padding: 60px;
+            background-color: #fff;
+            /* Fundo branco para o formulário */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Estilos para os rótulos */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Estilos para os campos de entrada */
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 3px;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Estilos para os campos de entrada quando hover */
+        input[type="number"]:hover,
+        select:hover {
+            border-color: #000000;
+        }
+
+        /* Estilos para o botão de envio */
+        input[type="submit"] {
+            background-color: #0b3185;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        /* Estilos para o botão de envio quando hover */
+        input[type="submit"]:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+            /* Aumenta ligeiramente o tamanho do botão */
+        }
+
+        /* Estilos para o botão de envio quando ativo (clicado) */
+        input[type="submit"]:active {
+            background-color: #000000;
+            transform: scale(0.95);
+            /* Reduz ligeiramente o tamanho do botão */
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <form action="/some-page" method="POST">
+        <label for="val1">Valor 1:</label>
+        <input type="number" name="val1" required>
+        <br>
+
+        <label for="val2">Valor 2:</label>
+        <input type="number" name="val2" required>
+        <br>
+
+        <label for="operation">Operação:</label>
+        <select name="operation" required>
+            <option value="soma">Soma</option>
+            <option value="subtract">Subtração </option>
+            <option value="multiply">Multiplicação</option>
+            <option value="divide">Divisão</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Calcular">
+    </form>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora {name ?: "Quarkus"}</title>
+</head>
+
+<body>
+    <form action="/calculadora" method="post">
+        <div class="container">
+            <fieldset>
+                <legend>CALCULADORA MVC</legend>
+                <br />
+                <label class="text">VALOR 1</label>
+                <br />
+                <input type="number" name="valor1" id="valor1" class="titulo" />
+                <br />
+                <br />
+                <label class="text">VALOR 2</label>
+                <br />
+                <input type="number" name="valor2" id="valor2" class="titulo" />
+                <br />
+                <br />
+                <label class="text">OPERAÇÃO</label>
+                <select name="operacao">
+                    <option>Soma</option>
+                    <option>Subtraçao</option>
+                    <option>Multiplicaçao</option>
+                    <option>Divisao</option>
+                </select>
+                <br />
+                <br />
+                <button name="calcular" id="calcular" class="text">Calcular</button>
+            </fieldset>
+    </form>
+    </div>
+    <br />
+    <h1>Resultado : <b>{resultado ?: erro}</b></h1>
+
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #0c343d;
+        color: #fff;
+    }
+
+    h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        font-size: medium;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 b {
+        color: #fff;
+    }
+
+    p {
+        font-size: 2vw;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 0px;
+    }
+</style>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1{
+            color: #fff;
+        }
+
+        h2 {
+            color: #4695EB;
+            font-size: 5vw;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 25%;
+        }
+
+        form input {
+            width: 80%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4695EB;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 125px;
+            height: 30px;
+            font-size: 120%;
+            margin: 5px;
+        }
+
+        select[name="operacao"] {
+            width: 50%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align-last: center;
+            font-weight: bold;
+            font-size: 105%;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <form action="/some-page" method="post">
+        
+
+        <input type="number" name="valor1" required placeholder="Valor 1"><br>
+        <input type="number" name="valor2" required placeholder="Valor 2"><br>
+
+        <select name="operacao" id="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <button type="submit">Calcular</button>
+
+        <h1>Resultado:</h1>
+        <h2 name="resultado"><span>{name}</span></h2>
+    </form>
+
+
+</body>
+
+</html>

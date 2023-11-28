@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute"}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Calculadora Balaa</h1>
+
+    <div class="container">
+        <form action="/calculator/result" method="post">
+            <p>Insira o primeiro Número:</p>
+            <input type="number" name="val1" id="val1 inp" placeholder="Valor 1">
+            <p>Insira o segundo Número:</p>
+            <input type="number" name="val2" id="val2 inp" placeholder="Valor 2">
+            <p>Escolha o operador:</p>
+            <select class="input-content" name="option">
+                {#for item in operadores}
+                    <option>{item}</option>
+                {/for}
+            </select><br>
+            <button type="submit" class="submit">Calcular</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

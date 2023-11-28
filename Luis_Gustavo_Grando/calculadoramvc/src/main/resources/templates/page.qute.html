@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" type="text/css" href="calc.css" media="screen" />
+</head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calculadora {
+            background-color: #fff;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+<body>
+<div class="calculadora">
+    <form id="calculadora" action="/calc/resultado" method="POST">
+        <label>Valor 1</label>
+        <input name="valor1">
+        <br>
+        <br>
+        <label>Valor 2</label>
+        <input name="valor2">
+        <br>
+        <br>
+        <label>Operacao</label>
+        <select name="operador">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+
+</body>
+</html>

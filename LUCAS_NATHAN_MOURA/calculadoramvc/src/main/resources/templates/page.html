@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4040;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p#result {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <form action="/calculator" method="post">
+        <label for="number1">Número 1:</label>
+        <input type="number" name="number1" id="number1" step="0.01" inputmode="numeric" required>
+        <br>
+
+        <label for="operation">Operação:</label>
+        <select name="operation" id="operation">
+            <option value="add">Soma</option>
+            <option value="subtract">Subtração</option>
+            <option value="multiply">Multiplicação</option>
+            <option value="divide">Divisão</option>
+        </select>
+        <br>
+
+        <label for="number2">Número 2:</label>
+        <input type="number" name="number2" id="number2" step="0.01" inputmode="numeric" required>
+        <br>
+
+        <button type="submit">Calcular</button>
+    </form>
+    <h2>Resultado:</h2>
+    <p id="result">{result}</p>
+</body>
+</html>

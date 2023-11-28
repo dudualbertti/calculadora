@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Vinicius</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            color: #1ddfae;
+        }
+
+        .container-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #e2e2e2;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: #e2e2e2;
+            border-radius: 7px;
+            padding: 40px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+            gap: 5px
+        }
+
+        form h1 {
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            font-size: 2.3em;
+        }
+
+        form input {
+            padding: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            border-radius: 4px;
+            transition: all linear 160ms;
+            outline: none;
+        }
+
+        form input:focus {
+            border: 1px solid #ffffff00;
+        }
+
+        select {
+            background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+            background-position: 218px center;
+            width: 250px;
+            height: 30px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            height: 40px;
+        }
+
+        button {
+            border-color: #3498db;
+            color: #fff;
+            box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+            -webkit-transition: all 150ms ease-in-out;
+            transition: all 150ms ease-in-out;
+            font-size: 30px;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+            color: #000000;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="container-form">
+
+        <form action="/calc/result" method="post">
+            <h1>Calculadora</h1>
+            <p>Insira o primeiro Número:</p>
+            <input name="val1" id="val1 inp" placeholder="Valor 1">
+            <p>Insira o segundo Número:</p>
+            <input name="val2" id="val2 inp" placeholder="Valor 2">
+            <p>Escolha o operador:</p>
+            <select name="option">
+                {#for item in operadores}
+                <option>{item}</option>
+                {/for}
+            </select><br>
+            <button type="submit" class="glow-on-hover">Calcular</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

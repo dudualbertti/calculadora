@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-background">
+    <main class="container">
+        <form class="content" action="/" method="POST" name="form">
+
+            <h5 class="mb-2"><strong>Rubens Simon</strong></h5>
+            <p class="text-muted">Web developper <b>{name}</b></h2>
+
+            <h2>My Calculator </h2>
+            <label>
+                <span class="label-title">Primeiro Valor</span>
+                <br>
+                <input type="number" name="primeiroValor" id="valueOne" required/>
+            </label>
+
+            <label>
+                <span class="label-title">Segundo Valor</span>
+                <br>
+                <input type="number" name="segundoValor" id="valueTwo" required/>
+            </label>
+
+            <label>
+                <span class="label-title"></span>
+                <select name="selectCalculadora" id="selectCalculadora">
+                    {#for op in arithmeticOperations}
+                        <option value="{op.getKey()}">{op.getValue()}</option>
+                    {/for}
+                </select>
+            </label>
+
+            <button class="btn-calculate" type="submit">Calcular</button>
+        </form>
+    </main>
+
+</body>
+
+</html>

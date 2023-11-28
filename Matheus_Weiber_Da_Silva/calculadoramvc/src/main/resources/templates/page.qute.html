@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute \n resultado" + result }</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1 {
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #be9100;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Hello <b>{result ?: "Qute"}</b></h1>
+    <form action="/calculadora" method="post">
+        <input type="text" name="valor1">
+         <input type="text" name="valor2" size="5"><br>
+        <select name="operador" >
+        {#for item in operadores}
+            
+            <option>
+            {item}
+            </option>
+        {/for}
+
+            
+
+        </select>
+       
+        <button>
+        calcular
+        </button>
+        <p id="saida">Resultado:</p>
+        <hr>
+    </form>
+
+</body>
+
+</html>
